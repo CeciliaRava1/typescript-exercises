@@ -15,5 +15,5 @@ console.log(getActiveAdultUsers())
 function getAge(birthdate: string): number {
     let currentYear = new Date().getFullYear();
     let age = (currentYear - parseInt(birthdate.substring(0,4)))
-    if (age > 18) return age
+    return age 
 }

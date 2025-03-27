@@ -3,5 +3,16 @@
 
 
 //Importar los datos desde el archivo data.ts
-import { data } from "../data";
+import { data, News } from "../data";
 
+export function fiveStarsNews(): boolean {
+    // if one 5 stars new exists return true
+    const news = data.news.filter(news => news.stars === 5)
+    if (news.length != 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+// console.log(fiveStarsNews())
