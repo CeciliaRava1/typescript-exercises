@@ -3,5 +3,12 @@
 
 
 //Importar los datos desde el archivo data.ts
-import { data } from "../data";
+import { data, Plan } from "../data";
 
+export function plansTotalPrice(): Number {
+    let sumPrices = 0
+    let plansPrices = data.plans.filter(plan => sumPrices += plan.price)
+    return Math.round(sumPrices)
+}
+
+console.log(plansTotalPrice())
